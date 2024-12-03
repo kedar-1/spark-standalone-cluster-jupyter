@@ -1,4 +1,7 @@
-# Running the code (Spark standalone cluster)
+# PySpark standalone cluster
+
+
+## Running the code 
 You can run the spark standalone cluster by running:
 ```shell
 make run
