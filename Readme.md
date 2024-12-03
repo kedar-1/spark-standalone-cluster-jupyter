@@ -1,44 +1,45 @@
-# About the repo
-
 # Running the code (Spark standalone cluster)
 You can run the spark standalone cluster by running:
 ```shell
 make run
 ```
-or with 3 workers using:
+or with 4 workers using (can be adsuted in Makefile):
 ```shell
 make run-scaled
-```
-
-There are a number of commands to build the standalone cluster,
-you should check the Makefile to see them all. But the
-simplest one is:
-```shell
-make build
 ```
 
 ## Web UIs
 The master node can be accessed on:
 `localhost:8080`. 
+
 The spark history server is accessible through:
 `localhost:18080`.
 
-# Fixing the links on the Spark master UI
-Since we are running the spark cluster on docker, the
-worker related links do not work on the UI.
-To fix this I created a generate-docker-compose script
-that generates the docker compose file (called 
-docker-compose.generated.yml) with the desired number of 
-workers where each worker has assigned and exposed port
-number.
+To open workers UI, you should use port that was assigned in docker-compose.yml.  
 
-To bring up this cluster, you can just run:
-```shell
-make run-generated
+
+## Data Files
+If you would like to import data files into pyspark, please make sure you have them located both on the cluster and your local drive **by the same path**.
+
+Default path is: ```/opt/spark/data/```.
+
+
+
+## Jupyter Notebook
+First, you have to install all the requirements to run Spark on your machine (not in VM), please for instructions from here (it's important to intsall JAVA locally first): https://spark.apache.org/docs/latest/api/python/getting_started/install.html.
+
+Make sure you have all required libraries installed with the same version as it is on the cluster. 
+
+Then you can connect to the cluster using Jupyter Notebook (or just any python script).
+
+You can see an example of creating a spark session from this notebook: notebooks/session.ipynb.
+
+All you need is to specify master node when creating the session, like this:
+``` python
+SparkSession.builder \
+    .appName("cluster-app") \
+    .master("spark://localhost:7077") \
 ```
+You can specify additional configs, like memory per executor, or cores for each worker. 
 
-By default, the command will launch a Spark cluster with
-a master, history server and 3 worker nodes. 
-
-# Stories published on Medium
-Setting up a standalone Spark cluster can be found [here](https://medium.com/@MarinAgli1/setting-up-a-spark-standalone-cluster-on-docker-in-layman-terms-8cbdc9fdd14b).
+You can find out more about config here https://sparkconfigoptimizer.com/ . 
