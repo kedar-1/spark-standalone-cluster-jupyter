@@ -46,7 +46,7 @@ You can find out more about config here https://sparkconfigoptimizer.com/ .
 
 ## Details on Docker image
 
-There is tutorial describing in details on how the docker image can be configured ofr standalone cluster: https://medium.com/@MarinAgli1/setting-up-a-spark-standalone-cluster-on-docker-in-layman-terms-8cbdc9fdd14b.
+There is tutorial describing in details on how the docker image can be configured for standalone cluster: https://medium.com/@MarinAgli1/setting-up-a-spark-standalone-cluster-on-docker-in-layman-terms-8cbdc9fdd14b.
 
 Code in this repo was adjusted to make it work out of the box with PySpark using regular Python scripts or JuPyter notebooks. 
 
