@@ -1,9 +1,5 @@
 # About the repo
 
-This repo contains only the skeleton for running
-a spark standalone cluster extracted from [this 
-repo](https://github.com/mrn-aglic/pyspark-playground).
-
 # Running the code (Spark standalone cluster)
 You can run the spark standalone cluster by running:
 ```shell
@@ -31,7 +27,7 @@ make build
 
 ## Web UIs
 The master node can be accessed on:
-`localhost:9090`. 
+`localhost:8080`. 
 The spark history server is accessible through:
 `localhost:18080`.
 
@@ -52,14 +48,5 @@ make run-generated
 By default, the command will launch a Spark cluster with
 a master, history server and 3 worker nodes. 
 
-# Jupyter lab
-After some time, I decided to add a jupyterlab service.
-For reference see this [GitHub repo](https://github.com/cluster-apps-on-docker/spark-standalone-cluster-on-docker).
-
-Jupyterlab will run on port 8888. There is a small
-example notebook on how to get started. 
-
 # Stories published on Medium
-1. Setting up a standalone Spark cluster can be found [here](https://medium.com/@MarinAgli1/setting-up-a-spark-standalone-cluster-on-docker-in-layman-terms-8cbdc9fdd14b).
-2. Setting up Hadoop Yarn to run Spark applications can be found [here](https://medium.com/@MarinAgli1/setting-up-hadoop-yarn-to-run-spark-applications-6ea1158287af).
-3. Using hostnames to access Hadoop resources can be found [here](https://medium.com/@MarinAgli1/using-hostnames-to-access-hadoop-resources-running-on-docker-5860cd7aeec1).
+Setting up a standalone Spark cluster can be found [here](https://medium.com/@MarinAgli1/setting-up-a-spark-standalone-cluster-on-docker-in-layman-terms-8cbdc9fdd14b).
