@@ -6,7 +6,7 @@ You can run the spark standalone cluster by running:
 ```shell
 make run
 ```
-or with 4 workers using (can be adsuted in Makefile):
+or with 4 workers using (can be adjusted in Makefile):
 ```shell
 make run-scaled
 ```
@@ -22,18 +22,18 @@ To open workers UI, you should use port that was assigned in docker-compose.yml.
 
 
 ## Data Files
-If you would like to import data files into pyspark, please make sure you have them located both on the cluster and your local drive **by the same path**.
+If you would like to import data files into PySpark, please make sure you have them located both on the cluster and your local drive **by the same path**.
 
 Default path is: ```/opt/spark/data/```.
 
 
 
 ## Jupyter Notebook
-First, you have to install all the requirements to run Spark on your machine (not in VM), please for instructions from here (it's important to intsall JAVA locally first): https://spark.apache.org/docs/latest/api/python/getting_started/install.html.
+First, you have to install all the requirements to run Spark on your machine (not in VM), please for instructions from here (it's important to install JAVA locally first): https://spark.apache.org/docs/latest/api/python/getting_started/install.html.
 
 Make sure you have all required libraries installed with the same version as it is on the cluster. 
 
-Then you can connect to the cluster using Jupyter Notebook (or just any python script).
+Then you can connect to the cluster using Jupyter Notebook (or just any Python script).
 
 You can see an example of creating a spark session from this notebook: notebooks/session.ipynb.
 
@@ -49,7 +49,7 @@ You can find out more about config here https://sparkconfigoptimizer.com/ .
 
 ## Details on Docker image
 
-There is tutorial describing in details on how the docker image can be configured for standalone cluster: https://medium.com/@MarinAgli1/setting-up-a-spark-standalone-cluster-on-docker-in-layman-terms-8cbdc9fdd14b.
+There is the tutorial describing in details on how the docker image can be configured for standalone cluster: https://medium.com/@MarinAgli1/setting-up-a-spark-standalone-cluster-on-docker-in-layman-terms-8cbdc9fdd14b.
 
 Code in this repo was adjusted to make it work out of the box with PySpark using regular Python scripts or JuPyter notebooks. 
 
