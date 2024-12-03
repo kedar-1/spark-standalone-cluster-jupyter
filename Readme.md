@@ -29,7 +29,7 @@ Default path is: ```/opt/spark/data/```.
 
 
 ## Jupyter Notebook
-First, you have to install all the requirements to run Spark on your machine (not in VM), please for instructions from here (it's important to install JAVA locally first): https://spark.apache.org/docs/latest/api/python/getting_started/install.html.
+First, you have to install all the requirements to run Spark on your machine (not in VM), please follow the instructions from here (it's important to install JAVA locally first): https://spark.apache.org/docs/latest/api/python/getting_started/install.html.
 
 Make sure you have all required libraries installed with the same version as it is on the cluster. 
 
