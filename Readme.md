@@ -9,14 +9,6 @@ or with 3 workers using:
 ```shell
 make run-scaled
 ```
-You can submit Python jobs with the command:
-```shell
-make submit app=dir/relative/to/spark_apps/dir
-```
-e.g. if you have `ex6.py` in your spark_apps folder: 
-```shell
-make submit app=ex6.py
-```
 
 There are a number of commands to build the standalone cluster,
 you should check the Makefile to see them all. But the
