@@ -1,5 +1,5 @@
 # PySpark standalone cluster
-
+![alt text](image.png)
 
 ## Running the code 
 You can run the spark standalone cluster by running:
